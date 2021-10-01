@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <head>
+            <meta charset="utf-8">
+            <title>BMI</title>
+              <!-- Booststrap CSS only -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+            <link rel="stylesheet" href="st.css">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+           <script>
+                function bill()
+            {
+                var input = document.getElementById("ones").value;
+                var output = document.getElementById("twos").value;
+                sum=input/(output*output);
+                if(sum<=18.5)
+                {
+                    
+                    document.getElementById("demo").innerHTML="<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;RESULT"+"<hr>"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;BMI&emsp;&emsp;&emsp;&emsp;:&emsp;"+sum+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;STATUS&emsp;&emsp;&nbsp;&nbsp;:&emsp;Under weight"+"<br>"+"<hr>"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;UNDER WEIGHT&emsp;<=&emsp;18.5"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;NORMAL WEIGHT&nbsp;&nbsp;&nbsp;=&emsp;18.5-24.9"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;OVER WEIGHT&emsp;&emsp;&nbsp;&nbsp;=&emsp;25-29.9"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;OBESITY&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;>=&emsp;30"
+                }
+                else if(sum>18.5 && sum<=24.9)
+                {
+                    
+                    document.getElementById("demo").innerHTML="<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;RESULT"+"<hr>"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;BMI&emsp;&emsp;&emsp;&emsp;:&emsp;"+sum+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;STATUS&emsp;&emsp;&nbsp;&nbsp;:&emsp;Normal"+"<br>"+"<hr>"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;UNDER WEIGHT&emsp;<=&emsp;18.5"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;NORMAL WEIGHT&nbsp;&nbsp;&nbsp;=&emsp;18.5-24.9"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;OVER WEIGHT&emsp;&emsp;&nbsp;&nbsp;=&emsp;25-29.9"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;OBESITY&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;>=&emsp;30"
+                }
+                else if(sum>24.9 && sum<=29.9)
+                {
+                    
+                    document.getElementById("demo").innerHTML="<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;RESULT"+"<hr>"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;BMI&emsp;&emsp;&emsp;&emsp;:&emsp;"+sum+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;STATUS&emsp;&emsp;&nbsp;&nbsp;:&emsp;Over weight"+"<br>"+"<hr>"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;UNDER WEIGHT&emsp;<=&emsp;18.5"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;NORMAL WEIGHT&nbsp;&nbsp;&nbsp;=&emsp;18.5-24.9"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;OVER WEIGHT&emsp;&emsp;&nbsp;&nbsp;=&emsp;25-29.9"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;OBESITY&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;>=&emsp;30"
+                }
+                else{
+                    
+                    document.getElementById("demo").innerHTML="<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;RESULT"+"<hr>"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;BMI&emsp;&emsp;&emsp;&emsp;:&emsp;"+sum+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;STATUS&emsp;&emsp;&nbsp;&nbsp;:&emsp;Obesity"+"<br>"+"<hr>"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;UNDER WEIGHT&emsp;<=&emsp;18.5"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;NORMAL WEIGHT&nbsp;&nbsp;&nbsp;=&emsp;18.5-24.9"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;OVER WEIGHT&emsp;&emsp;&nbsp;&nbsp;=&emsp;25-29.9"+"<br>"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;OBESITY&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;>=&emsp;30"
+                }
+               
+            } 
+           </script>
+           <style>
+                p{border-radius: 12px;
+                    margin-top: 30px;
+                    margin-left: auto;
+                margin-right: auto;
+            width: 600px;
+        background-color: rgb(60, 228, 228)}
+            </style> 
+        </head>
+    <body>
+        <h1 style="background-color:rgb(27, 141, 141) ;color: white; text-align: center;height: 80px;font-family: 'Times New Roman', Times, serif;font-size: 70px;">BMI CALCULATOR</h1>
+        <span><a href="index.html"><img src="h.png" alt="" style="width: 50px;margin-left:170PX"></a></span>
+        <p >
+            <span style="font-size: 40px;margin-top: 30px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;margin-left: 133px;">BMI CALCULATOR</span><br><br>
+          <br><br><br>
+                <label for="fname" style="font-size: 30px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-left:180px;"> WEIGHT in (kg)</label><br><br>
+                <input type="number" id="ones" name="fname" style="margin-left:100px; width: 400px;height: 48px;text-align: center;"><br><br>
+                <label for="fname" style="font-size: 30px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-left:180px;"> HEIGHT in (m)</label><br><br>
+                <input type="number" id="twos" name="fname" style="margin-left:100px; width: 400px;height: 48px;text-align: center;"><br><br>
+                <button type="button" onclick="bill()" style="margin-left: 200px;font-size: 30px;font-family: Georgia, 'Times New Roman', Times, serif;">CALCULATE</button>
+                <br><br>
+                
+            </p>
+            <p style="background-color: white;"><img id="img" style="margin-right: auto;margin-left: auto;width: 100px;margin-left: 230px;"></p>
+        <p id="demo" style="text-align:left;font-size: 20px;"></p>
+    </body>
+</html>
