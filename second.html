@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <head>
+            <meta charset="utf-8">
+            <title>CGPA</title>
+              <!-- Booststrap CSS only -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+            <link rel="stylesheet" href="st.css">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+           <style>
+                p{border-radius: 12px;
+                    margin-top: 70px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 600px;
+                    background-color: rgb(233, 75, 115)}
+          fieldset{
+	width: 100%;
+	max-width: 500px;
+	margin-top: 20px;
+	padding: 5px 0;
+	background-color:rgb(233, 75, 115);
+	transition: all .7sec linear;
+	}
+  
+form{
+	background-color: rgb(233, 75, 115);
+	width:92%;
+	max-width: 500px;
+	border-radius: 1px;
+	border-color: black;
+	padding: 10px 2%;
+	color: black;
+	margin: 20px auto;
+	box-shadow: 0 0 5px 3px black;
+}
+form input[type= "text"], form input[type= "checkbox"]{
+	width: 90%;
+	float: none;
+	padding: 4px 2%;
+	margin: 5px auto 0 auto;
+	color: black;
+	background-color: white;
+}
+	fieldset:last-child{margin-bottom: 20px;}
+	form label{color: black; width: 100%;margin-left: 3%; float: left; clear: both;}
+	form #radiobtn label{color: black; width: 30%;margin-left: 3%; clear: none;}
+  textarea{
+	width: 90%;
+	height: 100px;
+	padding:2%;
+	color: black;
+	max-width: 90%;
+}
+#cont{
+	min-width: 300px;
+	width: 100%;
+	min-width: 320px;
+	margin:0 auto;
+	margin-top: 100px;
+	clear: both;
+}
+            </style> 
+        </head>
+    <body background="b.gif">
+        <h1 style="background-color:rgb(233, 75, 115);color: white; text-align: center;height: 100px;font-family: 'Times New Roman', Times, serif;font-size: 70px;" background:none;> ONLINE CALCULATOR</h1>
+        <span><a href="https://gopinathide.github.io/calculator/"><img src="h.png" alt="" style="width: 50px;margin-left:170PX"></a>
+        
+        </span>
+        <p style="background-color:white;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 50px;width: 450px;margin-top: 0px;">CGPA</p>
+        <div id="cont"></div>
+        <form method="post" action="" onSubmit="return formsubmit();" id="courseform">
+        <fieldset>
+          <label style="font-size: 30PX;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">REGULATION:</label>	
+        <label style="font-size: 20PX;"><input type="radio" name="action" value="update" /> 2013&emsp;&emsp;
+         <input type="radio" name="action" value="remove" checked="checked"/>2018</label>	
+          <label style="font-size: 20px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><br>How many Semesters did you completed?<input type="text" name="box" placeholder="Number of semesters completed" onkeyup="addbox(this.value)" id="ones" /></label>
+          <legend id="boxes">
+            
+            <label style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 20px;"><br>SEMESTER GPA:<input type="text" name="code1" id="code1" placeholder="eg: 8.5" /><br><br></label>
+            </fieldset>
+            </legend>
+            <fieldset>
+             
+              <button type="button" onclick="calcgpa()" style="margin-left: 140px;font-size: 30px;font-family: Georgia, 'Times New Roman', Times, serif;">CALCULATE</button>
+              </fieldset>
+            
+        </form>  
+        <p id="demo"></p>
+        <script>
+          
+          function addbox(x) {
+
+  var input = document.getElementById("ones").value;
+if (input > 0 && input<9) {
+var boxes = document.getElementById("boxes");
+boxes.innerHTML="";
+
+var a,b,c,f;
+
+  for (m=1; m<=x; m++) {
+  a = document.createElement("fieldset"); a.class="fieldset";
+  b = document.createElement("label");
+  c = document.createTextNode("SEMESTER GPA:");
+  f = document.createElement("input");
+  f.type = "text";
+  
+  b.appendChild(c); //text to label
+  b.appendChild(f); //input(course code) to label
+  a.appendChild(b); //label to current fieldset
+  boxes.appendChild(a); //current fieldset to legend with id=boxes
+  
+  
+  }	  
+}
+}
+function calcgpa() {
+  var c,cgpa=0,gpa=0;
+		for(i=1;i<=input;i++)
+    {
+      c = document.getElementById("code"+i).value;
+      gpa=gpa+c;
+    }
+    cgpa=gpa/input;
+    alert(cgpa);
+    document.getElementById("demo").innerHTML=cgpa;
+  }
+
+        </script> 
+        
+    </body>
+</html>
